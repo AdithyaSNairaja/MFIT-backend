@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="creating_orientation_user_table" author="${developer.name}">
+        <createTable tableName="orientation_user">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="contact_no" type="BIGINT"/>
+            <column name="technology" type="VARCHAR(255)"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="orientation_date" type="VARCHAR(255)"/>
+            <column name="orientation_given_by" type="VARCHAR(255)"/>
+            <column name="has_technology_training" type="BOOLEAN"/>
+            <column name="parent_guardian_name" type="VARCHAR(255)"/>
+            <column name="parent_guardian_relation" type="VARCHAR(255)"/>
+            <column name="parent_guardian_contact" type="VARCHAR(255)"/>
+            <column name="referral_source" type="VARCHAR(255)"/>
+            <column name="previous_company_name" type="VARCHAR(255)"/>
+            <column name="employment_start_date" type="VARCHAR(255)"/>
+            <column name="employment_end_date" type="VARCHAR(255)"/>
+            <column name="industry" type="VARCHAR(255)"/>
+            <column name="institute_name" type="VARCHAR(255)"/>
+            <column name="degree_or_diploma" type="VARCHAR(255)"/>
+            <column name="specialization" type="VARCHAR(255)"/>
+            <column name="date_of_completion" type="VARCHAR(255)"/>
+            <column name="interested_to_join" type="BOOLEAN"/>
+            <column name="trial_period_interest" type="BOOLEAN"/>
+            <column name="payment_mode" type="VARCHAR(255)"/>
+            <column name="date" type="VARCHAR(255)"/>
+            <column name="signature" type="VARCHAR(255)"/>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

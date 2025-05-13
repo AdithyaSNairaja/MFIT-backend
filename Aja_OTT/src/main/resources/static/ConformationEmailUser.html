@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			line-height: 1.6;
+			color: #444;
+			margin: 0;
+			padding: 0;
+			background: #f9f9f9;
+		}
+		.container {
+			border: 1px solid #e0e0e0;
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			background: #fff;
+			max-width: 600px;
+			width: 100%;
+			margin: 0 auto;
+		}
+		.header {
+			background: #2b6ea5;
+			padding: 5px;
+			text-align: center;
+			display: inline-block;
+			width: 100%;
+			height: 150px;
+			background-image: url('https://ajacs.in/wp-content/uploads/2024/03/logo-aja.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.logo {
+			max-width: 200px;
+			height: auto;
+		}
+		.content {
+			padding: 25px;
+		}
+		h1 {
+			color: #2b6ea5;
+			font-size: 24px;
+			margin-top: 0;
+		}
+		.highlight-box {
+			background: #f0f7ff;
+			border-left: 4px solid #2b6ea5;
+			padding: 15px;
+			margin: 15px 0;
+			border-radius: 0 8px 8px 0;
+		}
+		.button {
+			display: inline-block;
+			background: rgb(0, 128, 192);
+			color: rgb(255, 255, 255);
+			padding: 12px 20px;
+			text-decoration: none;
+			border-radius: 5px;
+			font-weight: bold;
+			margin: 10px 5px 10px 0;
+		}
+		.button.secondary {
+			background: #6c757d;
+			color: rgb(255, 255, 255);
+		}
+		.button:hover {
+			opacity: 0.9;
+		}
+		.footer {
+			background: #2b6ea5;
+			padding: 4px;
+			text-align: center;
+			font-size: 12px;
+			color: #fff;
+		}
+		.social-links {
+			margin: 20px 0;
+			text-align: center;
+		}
+		.social-icon {
+			width: 16px;
+			height: 16px;
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+		.divider {
+			border-top: 1px solid #eee;
+			margin: 0px 0;
+		}
+		ul {
+			margin-top: 0;
+			padding-left: 20px;
+		}
+		li {
+			margin-bottom: 8px;
+		}
+		.reschedule-note {
+			background: #fff8e6;
+			border-left: 4px solid #ffc107;
+			padding: 15px;
+			border-radius: 0 8px 8px 0;
+		}
+		@media only screen and (max-width: 600px) {
+			.container {
+				border-radius: 0;
+				box-shadow: none;
+			}
+			.content {
+				padding: 20px 15px;
+			}
+			h1 {
+				font-size: 22px;
+			}
+			.highlight-box,
+			.reschedule-note {
+				padding: 12px;
+			}
+			.button {
+				display: block;
+				width: 100%;
+				margin: 10px 0;
+				box-sizing: border-box;
+			}
+			.header,
+			.footer {
+				padding: 15px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+		</div>
+
+		<div class="content">
+			<h1>Your Appointment is Scheduled! 🎉</h1>
+			<p>Dear ${candidateName},</p>
+			<p>We're excited to meet you for your session with <strong>AJA Coding Tutor</strong>.</p>
+			<div class="highlight-box">
+				<h3 style="margin-top: 0;">📅 Appointment Details</h3>
+				<p><strong>Date:</strong> ${date}</p>
+				<p><strong>Time:</strong> ${time}</p>
+				<p><strong>Location:</strong> AJA CONSULTING SERVICES LLP, A Block, 4th Floor, Q City, Gachibowli,
+					Hyderabad.</p>
+				<div style="margin-top: 20px;">
+					<a href="https://maps.app.goo.gl/6YzYa5HrTKhfXJyz5" class="button"
+						style="display: inline-block; background: rgb(43, 110, 165); color: #fff; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px 0;">📍
+						View on Google Maps</a>
+				</div>
+			</div>
+			<div class="reschedule-note">
+				<h3 style="margin-top: 0;">🔄 Need to Reschedule?</h3>
+				<a href="http://localhost:5173/Appointments" class="button secondary">Reschedule My Appointment</a>
+			</div>
+
+			<h3 style="margin-bottom: 10px;">🔹 What to Bring:</h3>
+			<ul>
+				<li>Please arrive on the given date and time.</li>
+				<li>Carry a valid ID proof – Aadhar card or any other government-issued identification.</li>
+				<li>An OTP will be sent to your registered mobile number and Vehicle details (if any) will also be
+					required.</li>
+				<li>Bring an updated resume – Make sure to carry a printed copy of your latest resume</li>
+			</ul>
+			<p>Need help? Call us at <strong>+91 9697969788</strong></p>
+		</div>
+		<div class="divider"></div>
+		<div style="text-align: center; margin-top: 15px;">
+			<a href="https://ajacs.in" target="_blank" style="display: inline-block;">
+				<img src="https://ajacs.in/wp-content/uploads/2024/03/logo-aja.png" alt="AJA Logo"
+					style="max-width: 120px; opacity: 0.9;">
+			</a>
+		</div>
+		<div class="footer">
+			<div class="social-links">
+				<h3 style="margin-top: 0; color:#fff;">Connect With Us:</h3>
+				<div>
+					<a href="https://www.instagram.com/ajacodingtutorllp?igsh=aW9tZm9lYXg2cnU2" target="_blank"
+						style="display: inline-block; margin: 0 10px; color: #fff; text-decoration: none;">
+						<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
+							class="social-icon">
+					</a>
+					<a href="https://www.youtube.com/@ajacodingtutorllp" target="_blank"
+						style="display: inline-block; margin: 0 10px; color: #fff; text-decoration: none;">
+						<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"
+							class="social-icon">
+					</a>
+					<a href="https://in.linkedin.com/company/ajaconsultingservicesllp" target="_blank"
+						style="display: inline-block; margin: 0 10px; color: #fff; text-decoration: none;">
+						<img src="https://cdn-icons-png.flaticon.com/512/1384/1384072.png" alt="LinkedIn"
+							class="social-icon">
+					</a>
+				</div>
+			</div>
+			<p style="margin: 0;">© 2024 AJA Consulting Services LLP | Hyderabad, India</p>
+			<p style="margin: 10px 0 0;">Follow us for updates and coding tips!</p>
+		</div>
+	</div>
+</body>
+
+</html>

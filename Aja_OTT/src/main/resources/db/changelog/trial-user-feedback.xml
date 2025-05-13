@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="creating_trail_user_feedback_table" author="${developer.name}">
+        <createTable tableName="trial_user_feed_back">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="contact_no" type="BIGINT"/>
+            <column name="technology" type="VARCHAR(255)"/>
+            <column name="overall_experience" type="VARCHAR(255)"/>
+            <column name="content_quality" type="VARCHAR(255)"/>
+            <column name="coding_tutor_support" type="VARCHAR(255)"/>
+            <column name="is_deleted" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="engagement_and_interactivity" type="VARCHAR(255)"/>
+            <column name="how_much_confidence_you_gained" type="VARCHAR(255)"/>
+            <column name="any_specific_experience_or_aspects_of_program" type="VARCHAR(1024)"/>
+            <column name="peer_interaction" type="VARCHAR(255)"/>
+            <column name="learning_experience_meet_expectations" type="VARCHAR(255)"/>
+            <column name="specific_aspects_of_learning" type="VARCHAR(1024)"/>
+            <column name="specific_aspects_of_learning_reach_your_expectation" type="VARCHAR(1024)"/>
+            <column name="concerns_issue_with_aja" type="VARCHAR(1024)"/>
+            <column name="decision_of_joining_aja" type="VARCHAR(255)"/>
+            <column name="additional_comment" type="VARCHAR(1024)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
